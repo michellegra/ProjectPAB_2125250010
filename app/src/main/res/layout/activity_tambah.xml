@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="6dp"
     android:orientation="vertical"
     android:background="@drawable/bg"
@@ -33,7 +33,7 @@
         android:hint="Nama"
         android:textSize="21sp"
         android:textColorHint="@color/white"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:inputType="text"
         />
 
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:hint="Asal"
         android:textColorHint="@color/white"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="21sp"
         android:inputType="text"
         />
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:hint="Deskripsi Singkat"
         android:textColorHint="@color/white"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="21sp"
         android:maxLength="20"
         android:inputType="text"
@@ -65,7 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#FFB8B8"
+        android:backgroundTint="#F1D9F8"
         android:layout_margin="20dp"
         android:textSize="21sp"
         android:textColor="@color/black"

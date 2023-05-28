@@ -38,9 +38,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        rvJajanan = findViewById(R.id.rv_kuliner);
+        rvJajanan = findViewById(R.id.rv_Jajanan);
         fabTambah = findViewById(R.id.fab_tambah);
-        pbJajanan = findViewById(R.id.pb_kuliner);
+        pbJajanan = findViewById(R.id.pb_Jajanan);
         lmJajanan = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvJajanan.setLayoutManager(lmJajanan);
 

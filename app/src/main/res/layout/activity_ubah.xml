@@ -34,8 +34,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nama"
-        android:textColorHint="@color/black"
-        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:textSize="21sp"
         android:inputType="text"
         />
@@ -45,8 +45,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Asal"
-        android:textColorHint="@color/black"
-        android:textColor="@color/black"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:textSize="21sp"
         android:inputType="number"
         />
@@ -56,9 +56,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Deskripsi Singkat"
-        android:textColorHint="@color/black"
+        android:textColorHint="@color/white"
         android:textSize="21sp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:inputType="text"
         />
 
@@ -67,7 +67,7 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#FFB8B8"
+        android:backgroundTint="#F1D9F8"
         android:layout_margin="20dp"
         android:textSize="21sp"
         android:textColor="@color/black"
