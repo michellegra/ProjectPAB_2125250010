@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:background="@drawable/bg"
+    android:elevation="32dp">
+
+    <LinearLayout
+        android:id="@+id/ll_jajanan"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:background="@drawable/bner"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:layout_marginLeft="50dp"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_asal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asal"
+            android:layout_marginLeft="50dp"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/tv_deskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:layout_marginLeft="50dp"
+            android:maxLines="2"
+            android:text="Deskripsi Singkat"
+            android:textSize="17sp" />
+        />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
