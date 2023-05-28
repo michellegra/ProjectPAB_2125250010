@@ -116,7 +116,7 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHKuline
                     String pesan = response.body().getPesan();
 
                     Toast.makeText(ctx, "Kode :" + kode +",Pesan: " + pesan,Toast.LENGTH_SHORT).show();
-                    ((MainActivity) ctx).retrieveKuliner();
+                    ((MainActivity) ctx).retrieveJajanan();
                 }
 
                 @Override
