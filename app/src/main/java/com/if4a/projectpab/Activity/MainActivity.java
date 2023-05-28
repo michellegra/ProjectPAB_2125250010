@@ -17,6 +17,7 @@ import com.if4a.projectpab.Adapter.AdapterJajanan;
 import com.if4a.projectpab.Model.ModelJajanan;
 import com.if4a.projectpab.Model.ModelResponses;
 import com.if4a.projectpab.R;
+import com.if4a.projectpab.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,10 +34,14 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager lmJajanan;
     private List<ModelJajanan> listJajanan = new ArrayList<>();
 
+//    private lateinit var binding:ActivityMainBinding
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        refreshApp();
 
         rvJajanan = findViewById(R.id.rv_Jajanan);
         fabTambah = findViewById(R.id.fab_tambah);
@@ -84,5 +89,13 @@ public class MainActivity extends AppCompatActivity {
                 pbJajanan.setVisibility(View.GONE);
             }
         });
+
+//        private void refreshApp(){
+//            Object swipeToRefresh;
+//            swipeToRefresh.setOnRefreshListener{
+//                Toast.makeText(this,"Page refreshed", Toast.LENGTH_SHORT).show();
+//            swipeToRefresh.isRefreshing = false
+//            }
+//        }
     }
 }
