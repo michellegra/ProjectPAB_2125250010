@@ -16,7 +16,9 @@ public interface APIRequestData {
     @POST("create.php")
     Call<ModelResponses> ardCreate(
             @Field("nama") String nama,
-            @Field("asal") String asal,
+            @Field("rasa") String rasa,
+            @Field("rating") String rating,
+            @Field("harga") String harga,
             @Field("deskripsi_singkat") String deskripsi_singkat
     );
 
@@ -25,7 +27,9 @@ public interface APIRequestData {
     Call<ModelResponses> ardUpdate(
             @Field("id") String id,
             @Field("nama") String nama,
-            @Field("asal") String asal,
+            @Field("rasa") String rasa,
+            @Field("rating") String rating,
+            @Field("harga") String harga,
             @Field("deskripsi_singkat") String deskripsi_singkat
     );
 

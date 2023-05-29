@@ -62,12 +62,14 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
     public class VHJajanan extends RecyclerView.ViewHolder{
         TextView tvId,tvNama,tvRasa,tvRating,tvHarga,tvDeskrpsiSingkat;
 
-        public VHKuliner(@NonNull View itemView) {
+        public VHJajanan(@NonNull View itemView) {
             super(itemView);
 
             tvId =itemView.findViewById(R.id.tv_id);
             tvNama =itemView.findViewById(R.id.tv_nama);
-            tvAsal =itemView.findViewById(R.id.tv_asal);
+            tvRasa =itemView.findViewById(R.id.tv_rasa);
+            tvRating =itemView.findViewById(R.id.tv_rating);
+            tvHarga=itemView.findViewById(R.id.tv_harga);
             tvDeskrpsiSingkat =itemView.findViewById(R.id.tv_deskripsi);
 
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
