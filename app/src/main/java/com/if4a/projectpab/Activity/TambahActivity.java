@@ -20,9 +20,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class TambahActivity extends AppCompatActivity {
-    private EditText etNama,etAsal,etDeskripsiSingkat;
+    private EditText etNama,etRasa,etRating,etHarga,etDeskripsiSingkat;
     private Button btnSimpan;
-    private String nama,asal,deskripsiSingkat;
+    private String nama,rasa,rating,harga,deskripsiSingkat;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,7 +30,9 @@ public class TambahActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tambah);
 
         etNama = findViewById(R.id.et_nama);
-        etAsal = findViewById(R.id.et_asal);
+        etRasa = findViewById(R.id.et_rasa);
+        etRating = findViewById(R.id.et_rating);
+        etHarga = findViewById(R.id.et_harga);
         etDeskripsiSingkat = findViewById(R.id.et_deskripsi);
         btnSimpan = findViewById(R.id.btn_tambah);
 
@@ -39,14 +41,22 @@ public class TambahActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 nama= etNama.getText().toString();
-                asal= etAsal.getText().toString();
+                rasa= etRasa.getText().toString();
+                rating= etRating.getText().toString();
+                harga= etHarga.getText().toString();
                 deskripsiSingkat= etDeskripsiSingkat.getText().toString();
 
                 if(nama.trim().isEmpty()){
                     etNama.setError("Nama Tidak Boleh kosong");
                 }
-                else if(asal.trim().isEmpty()){
-                    etAsal.setError("Asal Tidak Boleh Kosong");
+                else if(rasa.trim().isEmpty()){
+                    etRasa.setError("Asal Tidak Boleh Kosong");
+                }
+                else if(rating.trim().isEmpty()){
+                    etRating.setError("Rating Tidak Boleh Kosong");
+                }
+                else if(harga.trim().isEmpty()){
+                    etHarga.setError("Asal Tidak Boleh Kosong");
                 }
                 else if(deskripsiSingkat.trim().isEmpty()){
                     etDeskripsiSingkat.setError("Deskripsi singkat Tidak Boleh Kosong");
@@ -60,7 +70,7 @@ public class TambahActivity extends AppCompatActivity {
     }
     private void tambahKuliner(){
         APIRequestData ARD = RetroServer.konekRetrofit().create(APIRequestData.class);
-        Call<ModelResponses> proses = ARD.ardCreate(nama,asal,deskripsiSingkat);
+        Call<ModelResponses> proses = ARD.ardCreate(nama,rasa,rating,harga,deskripsiSingkat);
 
         proses.enqueue(new Callback<ModelResponses>() {
             @Override

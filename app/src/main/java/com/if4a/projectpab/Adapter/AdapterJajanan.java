@@ -27,7 +27,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHKuliner> {
+public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajanan> {
     private Context ctx;
     private List<ModelJajanan> listJajanan;
 
@@ -38,17 +38,19 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHKuline
 
     @NonNull
     @Override
-    public VHKuliner onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public VHJajanan onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View varView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_jajanan, parent,false);
-        return new VHKuliner(varView);
+        return new VHJajanan(varView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull VHKuliner holder, int position) {
+    public void onBindViewHolder(@NonNull VHJajanan holder, int position) {
         ModelJajanan MK = listJajanan.get(position);
         holder.tvId.setText(MK.getId());
         holder.tvNama.setText((position+1) + "." + MK.getNama());
-        holder.tvAsal.setText(MK.getAsal());
+        holder.tvRasa.setText(MK.getRasa());
+        holder.tvRating.setText(MK.getRating());
+        holder.tvHarga.setText(MK.getHarga());
         holder.tvDeskrpsiSingkat.setText(MK.getDeskripsi_singkat());
     }
 
@@ -57,8 +59,8 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHKuline
         return listJajanan.size();
     }
 
-    public class VHKuliner extends RecyclerView.ViewHolder{
-        TextView tvId,tvNama,tvAsal,tvDeskrpsiSingkat;
+    public class VHJajanan extends RecyclerView.ViewHolder{
+        TextView tvId,tvNama,tvRasa,tvRating,tvHarga,tvDeskrpsiSingkat;
 
         public VHKuliner(@NonNull View itemView) {
             super(itemView);
@@ -93,7 +95,9 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHKuline
                             Intent pindah = new Intent(ctx, UbahActivity.class);
                             pindah.putExtra("xId", tvId.getText().toString());
                             pindah.putExtra("xNama", tvNama.getText().toString());
-                            pindah.putExtra("xAsal", tvAsal.getText().toString());
+                            pindah.putExtra("xRasa", tvRasa.getText().toString());
+                            pindah.putExtra("xRating", tvRating.getText().toString());
+                            pindah.putExtra("xHarga", tvHarga.getText().toString());
                             pindah.putExtra("xDeskripsiSingkat", tvDeskrpsiSingkat.getText().toString());
                             ctx.startActivity(pindah);
                         }
