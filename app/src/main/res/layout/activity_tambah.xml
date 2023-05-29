@@ -15,7 +15,7 @@
         android:layout_marginBottom="22dp"
         android:gravity="center_horizontal"
         android:layout_marginTop="55dp"
-        android:text="Tambah Data Player"
+        android:text="Tambah Daftar Jajanan"
         android:textColor="@color/white"
         android:textSize="21sp"
         android:textStyle="bold" />
@@ -38,10 +38,30 @@
         />
 
     <EditText
-        android:id="@+id/et_asal"
+        android:id="@+id/et_rasa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Asal"
+        android:hint="Rasa"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="21sp"
+        android:inputType="text"
+        />
+    <EditText
+        android:id="@+id/et_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Rating"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="21sp"
+        android:inputType="text"
+        />
+    <EditText
+        android:id="@+id/et_harga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Harga"
         android:textColorHint="@color/white"
         android:textColor="@color/white"
         android:textSize="21sp"
