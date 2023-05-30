@@ -10,7 +10,6 @@ public class ModelJajanan {
     public String getNama() {
         return nama;
     }
-
     public String getRasa() {
         return rasa;
     }
