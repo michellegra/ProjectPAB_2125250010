@@ -30,6 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:text="Nama"
+            android:textColor="@color/black"
             android:textSize="21sp"
             android:textStyle="bold" />
 
@@ -38,7 +39,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
-            android:text="Asal"
+            android:text="Rasa"
+            android:textColor="@color/black"
             android:textSize="21sp" />
 
         <TextView
@@ -47,6 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:text="Rating"
+            android:textColor="@color/black"
             android:textSize="21sp" />
 
         <TextView
@@ -54,6 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
+            android:textColor="@color/black"
             android:text="Harga"
             android:textSize="21sp" />
 
@@ -62,11 +66,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
+            android:textColor="@color/black"
             android:ellipsize="end"
             android:maxLines="2"
             android:text="Deskripsi Singkat"
             android:textSize="17sp" />
-        />
 
     </LinearLayout>
 

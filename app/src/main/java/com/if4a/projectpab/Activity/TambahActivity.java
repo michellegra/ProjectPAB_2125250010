@@ -62,13 +62,13 @@ public class TambahActivity extends AppCompatActivity {
                     etDeskripsiSingkat.setError("Deskripsi singkat Tidak Boleh Kosong");
                 }
                 else{
-                    tambahKuliner();
+                    tambahJajanan();
 
                 }
             }
         });
     }
-    private void tambahKuliner(){
+    private void tambahJajanan(){
         APIRequestData ARD = RetroServer.konekRetrofit().create(APIRequestData.class);
         Call<ModelResponses> proses = ARD.ardCreate(nama,rasa,rating,harga,deskripsiSingkat);
 
@@ -78,7 +78,7 @@ public class TambahActivity extends AppCompatActivity {
                 String kode = response.body().getKode();
                 String pesan = response.body().getPesan();
 
-                Toast.makeText(TambahActivity.this,"Kode : " + kode + ", Pesam: " + pesan, Toast.LENGTH_SHORT).show();
+                Toast.makeText(TambahActivity.this,"Kode : " + kode + ", Pesan: " + pesan, Toast.LENGTH_SHORT).show();
                 finish();
             }
 

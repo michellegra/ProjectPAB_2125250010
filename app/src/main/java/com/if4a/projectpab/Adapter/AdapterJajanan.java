@@ -56,6 +56,7 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
 
     @Override
     public int getItemCount() {
+
         return listJajanan.size();
     }
 

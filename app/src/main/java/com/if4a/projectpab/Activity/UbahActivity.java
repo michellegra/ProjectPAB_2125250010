@@ -78,15 +78,15 @@ public class UbahActivity extends AppCompatActivity {
                     etDeskripsiSingkat.setError("Deskripsi singkat Tidak Boleh Kosong");
                 }
                 else{
-                    UbahKuliner();
+                    UbahJajanan();
                 }
             }
         });
     }
 
-    private void UbahKuliner(){
+    private void UbahJajanan(){
         APIRequestData ARD = RetroServer.konekRetrofit().create(APIRequestData.class);
-        Call<ModelResponses> proses = ARD.ardUpdate(yId, nama,rasa,rating,harga,deskripsiSingkat);
+        Call<ModelResponses> proses = ARD.ardCreate(nama,rasa,rating,harga,deskripsiSingkat);
 
         proses.enqueue(new Callback<ModelResponses>() {
             @Override
@@ -94,7 +94,7 @@ public class UbahActivity extends AppCompatActivity {
                 String kode = response.body().getKode();
                 String pesan = response.body().getPesan();
 
-                Toast.makeText(UbahActivity.this,"Kode : " + kode + ", Pesam: " + pesan, Toast.LENGTH_SHORT).show();
+                Toast.makeText(UbahActivity.this,"Kode : " + kode + ", Pesan: " + pesan, Toast.LENGTH_SHORT).show();
                 finish();
             }
 
@@ -105,5 +105,5 @@ public class UbahActivity extends AppCompatActivity {
             }
         });
     }
-
 }
+
