@@ -73,6 +73,20 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
             tvHarga=itemView.findViewById(R.id.tv_harga);
             tvDeskrpsiSingkat =itemView.findViewById(R.id.tv_deskripsi);
 
+            holder.ivArrow.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(holder.tv_Deskripsi.getVisibility() == View.GONE){
+                        holder.ivArrow.setImageResource(R.drawable.ic_arrow_up);
+                        holder.tv_Deskripsi.setVisibility(View.VISIBLE);
+                    }
+                    else{
+                        holder.ivArrow.setImageResource(R.drawable.ic_arrow_down);
+                        holder.tv_Deskripsi.setVisibility(View.GONE);
+                    }
+                }
+            });
+
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {

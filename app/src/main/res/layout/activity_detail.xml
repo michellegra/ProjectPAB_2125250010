@@ -1,0 +1,57 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="6dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg"
+        tools:context=".Activity.DetailActivity">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/bner"/>
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Detail Activity"-->
+<!--            android:textSize="21sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:layout_marginTop="50dp"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:layout_marginBottom="32dp"-->
+<!--            />-->
+
+        <TextView
+            android:id="@+id/tv_detailnama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Jajanan"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="32dp"
+            />
+        <TextView
+            android:id="@+id/tv_detailrasa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rasa"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginLeft="30dp"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="32dp"
+            />
+
+</LinearLayout>

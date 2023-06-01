@@ -7,7 +7,7 @@
     android:layout_height="wrap_content">
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="6dp"
     android:orientation="vertical"
     android:background="@drawable/bg"
@@ -85,15 +85,17 @@
         android:inputType="text"
         />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_Ubah"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginTop="16dp"
         android:backgroundTint="#F1D9F8"
+        app:cornerRadius="20dp"
         android:layout_margin="20dp"
         android:textSize="21sp"
         android:textColor="@color/black"
         android:text="UBAH"/>
+
 </LinearLayout>
 </ScrollView>
