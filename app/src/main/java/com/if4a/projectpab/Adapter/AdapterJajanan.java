@@ -56,36 +56,21 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
 
     @Override
     public int getItemCount() {
-
         return listJajanan.size();
     }
 
     public class VHJajanan extends RecyclerView.ViewHolder{
-        TextView tvId,tvNama,tvRasa,tvRating,tvHarga,tvDeskrpsiSingkat;
+        TextView tvId, tvNama,tvRasa,tvRating,tvHarga,tvDeskrpsiSingkat;
 
         public VHJajanan(@NonNull View itemView) {
             super(itemView);
 
             tvId =itemView.findViewById(R.id.tv_id);
-            tvNama =itemView.findViewById(R.id.tv_nama);
-            tvRasa =itemView.findViewById(R.id.tv_rasa);
-            tvRating =itemView.findViewById(R.id.tv_rating);
-            tvHarga=itemView.findViewById(R.id.tv_harga);
+            tvNama = itemView.findViewById(R.id.tv_nama);
+            tvRasa = itemView.findViewById(R.id.tv_rasa);
+            tvRating = itemView.findViewById(R.id.tv_rating);
+            tvHarga = itemView.findViewById(R.id.tv_harga);
             tvDeskrpsiSingkat =itemView.findViewById(R.id.tv_deskripsi);
-
-            holder.ivArrow.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(holder.tv_Deskripsi.getVisibility() == View.GONE){
-                        holder.ivArrow.setImageResource(R.drawable.ic_arrow_up);
-                        holder.tv_Deskripsi.setVisibility(View.VISIBLE);
-                    }
-                    else{
-                        holder.ivArrow.setImageResource(R.drawable.ic_arrow_down);
-                        holder.tv_Deskripsi.setVisibility(View.GONE);
-                    }
-                }
-            });
 
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override

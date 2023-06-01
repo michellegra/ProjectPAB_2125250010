@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/square"
+    tools:context=".Activity.ContactUsActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/contact"
+        android:layout_marginTop="215dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="55dp"
+        android:layout_marginRight="45dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_namaContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Michelle Graciela ( 2125250010 )"
+        />
+
+
+</RelativeLayout>

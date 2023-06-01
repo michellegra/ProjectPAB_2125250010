@@ -21,7 +21,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="30dp"
         android:layout_marginHorizontal="30dp"
-        android:src="@drawable/putih"
+        android:src="@drawable/logo2don"
         android:layout_below="@id/tv_aboutUs"/>
     <TextView
         android:id="@+id/tv_michelle"
@@ -51,7 +51,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="80dp"
         android:layout_marginHorizontal="30dp"
-        android:src="@drawable/coklat"
+        android:src="@drawable/logo2don"
         android:layout_below="@id/iv_putih"/>
     <TextView
         android:id="@+id/tv_rikky"

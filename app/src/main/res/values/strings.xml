@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">JajananKu</string>
+    <string name="menu_about">AboutMe</string>
+    <string name="menu_contact">ContactUS</string>
 
 </resources>

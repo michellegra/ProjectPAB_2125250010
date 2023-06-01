@@ -1,11 +1,15 @@
 package com.if4a.projectpab.Activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -13,6 +17,7 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.if4a.projectpab.API.APIRequestData;
 import com.if4a.projectpab.API.RetroServer;
+import com.if4a.projectpab.AboutUsActivity;
 import com.if4a.projectpab.Adapter.AdapterJajanan;
 import com.if4a.projectpab.Model.ModelJajanan;
 import com.if4a.projectpab.Model.ModelResponses;
@@ -61,6 +66,27 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         retrieveJajanan();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.action_menu,menu);
+        return true;
+    }
+
+//    @SuppressLint("NonConstrantResourceId")
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item)
+    {
+        if (item.getItemId() == R.id.menu_about)
+        {
+            startActivity(new Intent(MainActivity.this, AboutUsActivity.class));
+        }
+        else
+        {
+            startActivity(new Intent(MainActivity.this, ContactUsActivity.class));
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public void retrieveJajanan() {
