@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -17,12 +16,10 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.if4a.projectpab.API.APIRequestData;
 import com.if4a.projectpab.API.RetroServer;
-import com.if4a.projectpab.AboutUsActivity;
 import com.if4a.projectpab.Adapter.AdapterJajanan;
 import com.if4a.projectpab.Model.ModelJajanan;
 import com.if4a.projectpab.Model.ModelResponses;
 import com.if4a.projectpab.R;
-import com.if4a.projectpab.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,8 +1,10 @@
-package com.if4a.projectpab;
+package com.if4a.projectpab.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.if4a.projectpab.R;
 
 public class AboutUsActivity extends AppCompatActivity {
 

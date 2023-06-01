@@ -54,7 +54,7 @@
         </activity>
 
         <activity
-            android:name=".AboutUsActivity"
+            android:name=".Activity.AboutUsActivity"
             android:exported="false" />
 
         <activity
