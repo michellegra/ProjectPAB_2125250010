@@ -47,7 +47,8 @@
             android:parentActivityName=".Activity.MainActivity" />
         <activity
             android:name=".Activity.ContactUsActivity"
-            android:exported="false">
+            android:exported="false"
+            android:parentActivityName=".Activity.MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -55,11 +56,13 @@
 
         <activity
             android:name=".Activity.AboutUsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Activity.MainActivity"/>
 
         <activity
             android:name=".Activity.DetailActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Activity.MainActivity"/>
     </application>
 
 
