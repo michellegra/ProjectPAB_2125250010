@@ -4,30 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/square"
+    android:background="@drawable/contact"
     android:orientation="vertical"
     tools:context=".Activity.ContactUsActivity">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:background="@drawable/contact"
-        android:layout_marginTop="220dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginBottom="55dp"
-        android:layout_marginRight="45dp"
-        />
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="fill_parent"-->
+<!--        android:background="@drawable/contact"-->
+<!--        android:layout_marginTop="220dp"-->
+<!--        android:layout_marginLeft="40dp"-->
+<!--        android:layout_marginBottom="55dp"-->
+<!--        android:layout_marginRight="45dp"-->
+<!--        />-->
 
-    <TextView
-        android:id="@+id/tv_namaContact"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="140dp"
-        android:layout_marginRight="10dp"
-        android:text="Michelle Graciela ( 2125250010 )"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+<!--    <TextView-->
+<!--        android:id="@+id/tv_namaContact"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="40dp"-->
+<!--        android:layout_marginTop="140dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:text="Michelle Graciela ( 2125250010 )"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textStyle="bold" />-->
 
 
 </RelativeLayout>
