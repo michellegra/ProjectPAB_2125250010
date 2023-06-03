@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.if4a.projectpab.API.APIRequestData;
 import com.if4a.projectpab.API.RetroServer;
+import com.if4a.projectpab.Activity.DetailActivity;
 import com.if4a.projectpab.Activity.MainActivity;
 import com.if4a.projectpab.Activity.UbahActivity;
 import com.if4a.projectpab.Model.ModelJajanan;
@@ -45,13 +46,32 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
 
     @Override
     public void onBindViewHolder(@NonNull VHJajanan holder, int position) {
-        ModelJajanan MK = listJajanan.get(position);
-        holder.tvId.setText(MK.getId());
-        holder.tvNama.setText((position+1) + "." + MK.getNama());
-        holder.tvRasa.setText(MK.getRasa());
-        holder.tvRating.setText(MK.getRating());
-        holder.tvHarga.setText(MK.getHarga());
-        holder.tvDeskrpsiSingkat.setText(MK.getDeskripsi_singkat());
+        ModelJajanan MJ = listJajanan.get(position);
+        holder.tvId.setText(MJ.getId());
+        holder.tvNama.setText((position+1) + "." + MJ.getNama());
+        holder.tvRasa.setText(MJ.getRasa());
+        holder.tvRating.setText(MJ.getRating());
+        holder.tvHarga.setText(MJ.getHarga());
+        holder.tvDeskrpsiSingkat.setText(MJ.getDeskripsi_singkat());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String nama = MJ.getNama();
+                String rasa = MJ.getRasa();
+                String rating = MJ.getRating();
+                String harga = MJ.getHarga();
+                String deskripsiSingkat = MJ.getDeskripsi_singkat();
+
+                Intent intent  = new Intent(holder.itemView.getContext(), DetailActivity.class);
+                intent.putExtra("varNama",nama);
+                intent.putExtra("varRasa",rasa);
+                intent.putExtra("varRating",rating);
+                intent.putExtra("varHarga",harga);
+                intent.putExtra("varDeskripsiSingkat",deskripsiSingkat);
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -71,8 +91,6 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
             tvRating = itemView.findViewById(R.id.tv_rating);
             tvHarga = itemView.findViewById(R.id.tv_harga);
             tvDeskrpsiSingkat =itemView.findViewById(R.id.tv_deskripsi);
-
-
 
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
