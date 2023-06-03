@@ -72,6 +72,8 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
             tvHarga = itemView.findViewById(R.id.tv_harga);
             tvDeskrpsiSingkat =itemView.findViewById(R.id.tv_deskripsi);
 
+
+
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
