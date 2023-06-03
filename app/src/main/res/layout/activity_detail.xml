@@ -15,18 +15,18 @@
             android:layout_height="200dp"
             android:background="@drawable/bner"/>
 
-<!--        <TextView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Detail Activity"-->
-<!--            android:textSize="21sp"-->
-<!--            android:textStyle="bold"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:layout_marginTop="50dp"-->
-<!--            android:layout_gravity="center_horizontal"-->
-<!--            android:gravity="center_horizontal"-->
-<!--            android:layout_marginBottom="32dp"-->
-<!--            />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Activity"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            />
 
         <TextView
             android:id="@+id/tv_detailnama"
@@ -36,16 +36,52 @@
             android:textSize="25sp"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="15dp"
             android:layout_marginLeft="30dp"
             android:gravity="center_horizontal"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="20dp"
             />
         <TextView
             android:id="@+id/tv_detailrasa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rasa"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginLeft="30dp"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="32dp"
+            />
+        <TextView
+            android:id="@+id/tv_detailrating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginLeft="30dp"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="32dp"
+            />
+        <TextView
+            android:id="@+id/tv_detailharga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harga"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginLeft="30dp"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="32dp"
+            />
+        <TextView
+            android:id="@+id/tv_detaildeskripsiSingkat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi Singkat"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/white"
