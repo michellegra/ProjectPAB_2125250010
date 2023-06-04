@@ -3,14 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="6dp"
-    android:background="@drawable/bg"
+    android:background="@drawable/bg2"
     android:elevation="32dp">
 
     <LinearLayout
         android:id="@+id/ll_jajanan"
         android:layout_width="match_parent"
-        android:layout_height="165dp"
-        android:background="@drawable/bner"
+        android:layout_height="218dp"
+        android:background="@drawable/bgbanner"
         android:orientation="vertical"
         android:padding="10dp">
 
@@ -29,6 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
+            android:layout_marginTop="30sp"
             android:text="Nama"
             android:textColor="@color/black"
             android:textSize="21sp"
@@ -42,13 +43,21 @@
             android:text="Rasa"
             android:textColor="@color/black"
             android:textSize="21sp" />
+<!--        <TextView-->
+<!--            android:id="@+id/tv_arrow"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="340dp"-->
+<!--            android:text=">"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="21sp" />-->
 
         <TextView
             android:id="@+id/tv_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
-            android:text="Rating"
+            android:text="Rating                                         >"
             android:textColor="@color/black"
             android:textSize="21sp" />
 
@@ -57,8 +66,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
-            android:textColor="@color/black"
             android:text="Harga"
+            android:textColor="@color/black"
             android:textSize="21sp" />
 
         <TextView
@@ -67,9 +76,11 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="100dp"
-            android:textColor="@color/black"
             android:text="Deskripsi Singkat"
+            android:maxLines="1"
+            android:textColor="@color/black"
             android:textSize="21sp" />
+
 
     </LinearLayout>
 

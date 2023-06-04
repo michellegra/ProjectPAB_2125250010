@@ -3,21 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
 
 <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="6dp"
         android:orientation="vertical"
-        android:background="@drawable/bg"
+        android:background="@drawable/ok"
         tools:context=".Activity.DetailActivity">
 
-        <ImageView
-            android:id="@+id/img"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@drawable/bner"/>
+<!--        <ImageView-->
+<!--            android:id="@+id/img"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="200dp"-->
+<!--            android:background="@drawable/bner"/>-->
 
         <TextView
             android:layout_width="wrap_content"
@@ -25,8 +26,8 @@
             android:text="Detail Jajanan"
             android:textSize="21sp"
             android:textStyle="bold"
-            android:textColor="@color/white"
-            android:layout_marginTop="20dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="50dp"
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"
             android:layout_marginBottom="20dp"
@@ -39,7 +40,7 @@
             android:text="Nama Jajanan"
             android:textSize="25sp"
             android:textStyle="bold"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="30dp"
             android:gravity="center_horizontal"
@@ -52,7 +53,7 @@
             android:text="Rasa"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_marginLeft="30dp"
             android:gravity="center_horizontal"
             android:layout_marginBottom="32dp"
@@ -64,7 +65,7 @@
             android:text="Rating"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_marginLeft="30dp"
             android:gravity="center_horizontal"
             android:layout_marginBottom="32dp"
@@ -76,7 +77,7 @@
             android:text="Harga"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_marginLeft="30dp"
             android:gravity="center_horizontal"
             android:layout_marginBottom="32dp"
@@ -88,12 +89,11 @@
             android:text="Deskripsi Singkat"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="40dp"
             android:gravity="center_horizontal"
             android:layout_marginBottom="32dp"
             />
-
         </LinearLayout>
 </ScrollView>
