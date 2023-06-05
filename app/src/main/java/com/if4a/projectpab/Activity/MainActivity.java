@@ -43,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        refreshApp();
-
         rvJajanan = findViewById(R.id.rv_Jajanan);
         fabTambah = findViewById(R.id.fab_tambah);
         pbJajanan = findViewById(R.id.pb_Jajanan);
