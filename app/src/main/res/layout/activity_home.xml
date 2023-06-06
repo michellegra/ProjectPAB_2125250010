@@ -1,25 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/home"
+    android:layout_margin="6dp"
     android:orientation="vertical"
     tools:context=".Activity.HomeActivity">
+
+        <ImageView
+            android:id="@+id/iv_ilustrasi"
+            android:layout_width="wrap_content"
+            android:layout_height="301dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="50dp"
+            android:src="@drawable/gifpinguin" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome To JajananKu"
+            android:layout_marginLeft="90dp"
+            android:layout_marginRight="90dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_getstarted"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="350sp"
-            android:layout_marginLeft="50sp"
-            android:layout_marginRight="50sp"
-            android:textSize="21sp"
-            android:textColor="@color/white"
-            app:cornerRadius="20dp"
-            android:text="Get Started">
-
-        </com.google.android.material.button.MaterialButton>
-
+            android:layout_height="70dp"
+            android:layout_margin="20dp"
+            android:layout_marginTop="100dp"
+            android:backgroundTint="#F1D9F8"
+            android:text="GET STARTED"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:cornerRadius="20dp" />
 </LinearLayout>
