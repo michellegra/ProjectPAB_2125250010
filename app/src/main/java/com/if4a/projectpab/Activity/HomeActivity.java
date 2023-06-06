@@ -20,6 +20,7 @@ public class HomeActivity extends AppCompatActivity {
         View decorView = getWindow().getDecorView();
 
         decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
+        btn_start = findViewById(R.id.btn_getstarted);
 
         if(getSupportActionBar() != null){
             getSupportActionBar().hide();
