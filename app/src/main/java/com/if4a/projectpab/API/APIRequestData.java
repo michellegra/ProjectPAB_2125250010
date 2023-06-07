@@ -19,7 +19,8 @@ public interface APIRequestData {
             @Field("rasa") String rasa,
             @Field("rating") String rating,
             @Field("harga") String harga,
-            @Field("deskripsi_singkat") String deskripsi_singkat
+            @Field("deskripsi_singkat") String deskripsi_singkat,
+            @Field("Gambar") String Gambar
     );
 
     @FormUrlEncoded
@@ -30,7 +31,8 @@ public interface APIRequestData {
             @Field("rasa") String rasa,
             @Field("rating") String rating,
             @Field("harga") String harga,
-            @Field("deskripsi_singkat") String deskripsi_singkat
+            @Field("deskripsi_singkat") String deskripsi_singkat,
+            @Field("Gambar") String Gambar
     );
 
     @FormUrlEncoded

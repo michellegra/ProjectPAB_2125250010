@@ -57,6 +57,7 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
         holder.tvRating.setText(MJ.getRating());
         holder.tvHarga.setText(MJ.getHarga());
         holder.tvDeskrpsiSingkat.setText(MJ.getDeskripsi_singkat());
+
 //        holder.bind(new ModelJajanan(MJ.getGambar()));
 
         if(MJ.getGambar().isEmpty()){
@@ -94,7 +95,7 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
     }
 
     public class VHJajanan extends RecyclerView.ViewHolder{
-        TextView tvId, tvNama,tvRasa,tvRating,tvHarga,tvDeskrpsiSingkat;
+        TextView tvId, tvNama,tvRasa,tvRating,tvHarga,tvDeskrpsiSingkat,tvGambar;
         ImageView iv_gambar;
 //        private ModelJajanan gambar;
 
@@ -108,7 +109,6 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
             tvHarga = itemView.findViewById(R.id.tv_harga);
             tvDeskrpsiSingkat =itemView.findViewById(R.id.tv_deskripsi);
             iv_gambar = itemView.findViewById(R.id.iv_jajanan);
-
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {

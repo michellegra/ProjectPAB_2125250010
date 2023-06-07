@@ -20,9 +20,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class TambahActivity extends AppCompatActivity {
-    private EditText etNama,etRasa,etRating,etHarga,etDeskripsiSingkat;
+    private EditText etNama,etRasa,etRating,etHarga,etGambar,etDeskripsiSingkat;
     private Button btnSimpan;
-    private String nama,rasa,rating,harga,deskripsiSingkat;
+    private String nama,rasa,rating,harga,deskripsiSingkat,Gambar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,6 +35,7 @@ public class TambahActivity extends AppCompatActivity {
         etHarga = findViewById(R.id.et_harga);
         etDeskripsiSingkat = findViewById(R.id.et_deskripsi);
         btnSimpan = findViewById(R.id.btn_tambah);
+        etGambar = findViewById(R.id.et_Gambar);
 
         btnSimpan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +46,8 @@ public class TambahActivity extends AppCompatActivity {
                 rating= etRating.getText().toString();
                 harga= etHarga.getText().toString();
                 deskripsiSingkat= etDeskripsiSingkat.getText().toString();
+                Gambar = etGambar.getText().toString();
+
 
                 if(nama.trim().isEmpty()){
                     etNama.setError("Nama Tidak Boleh kosong");
@@ -70,7 +73,7 @@ public class TambahActivity extends AppCompatActivity {
     }
     private void tambahJajanan(){
         APIRequestData ARD = RetroServer.konekRetrofit().create(APIRequestData.class);
-        Call<ModelResponses> proses = ARD.ardCreate(nama,rasa,rating,harga,deskripsiSingkat);
+        Call<ModelResponses> proses = ARD.ardCreate(nama,rasa,rating,harga,deskripsiSingkat,Gambar);
 
         proses.enqueue(new Callback<ModelResponses>() {
             @Override
@@ -84,7 +87,7 @@ public class TambahActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ModelResponses> call, Throwable t) {
-                Toast.makeText(TambahActivity.this,"Gagal Menghubungi Server" , Toast.LENGTH_SHORT).show();
+                Toast.makeText(TambahActivity.this,"Gagal Menghubungi Server" + t.toString() , Toast.LENGTH_SHORT).show();
 
             }
         });

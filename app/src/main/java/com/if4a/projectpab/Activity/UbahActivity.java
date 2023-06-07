@@ -20,10 +20,10 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class UbahActivity extends AppCompatActivity {
-    private String yId,yNama,yRasa,yRating,yHarga,yDeskripsiSingkat;
-    private EditText etNama,etRasa,etRating,etHarga,etDeskripsiSingkat;
+    private String yId,yNama,yRasa,yRating,yHarga,yDeskripsiSingkat,yGambar;
+    private EditText etNama,etRasa,etRating,etHarga,etDeskripsiSingkat,etGambar;
     private Button btnUbah;
-    private String nama,rasa,rating,harga,deskripsiSingkat;
+    private String nama,rasa,rating,harga,deskripsiSingkat,Gambar;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -38,12 +38,14 @@ public class UbahActivity extends AppCompatActivity {
         yRating = ambil.getStringExtra("xRating");
         yHarga = ambil.getStringExtra("xHarga");
         yDeskripsiSingkat = ambil.getStringExtra("xDeskripsiSingkat");
+        yGambar = ambil.getStringExtra("xGambar");
 
         etNama = findViewById(R.id.et_nama);
         etRasa = findViewById(R.id.et_rasa);
         etRating = findViewById(R.id.et_rating);
         etHarga = findViewById(R.id.et_harga);
         etDeskripsiSingkat = findViewById(R.id.et_deskripsi);
+        etGambar =findViewById(R.id.et_Gambar);
         btnUbah = findViewById(R.id.btn_Ubah);
 
 
@@ -52,6 +54,7 @@ public class UbahActivity extends AppCompatActivity {
         etRating.setText(yRating);
         etHarga.setText(yHarga);
         etDeskripsiSingkat.setText(yDeskripsiSingkat);
+        etGambar.setText(yGambar);
 
         btnUbah.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +65,7 @@ public class UbahActivity extends AppCompatActivity {
                 rating= etRating.getText().toString();
                 harga= etHarga.getText().toString();
                 deskripsiSingkat= etDeskripsiSingkat.getText().toString();
+                Gambar=etGambar.getText().toString();
 
                 if(nama.trim().isEmpty()){
                     etNama.setError("Nama Tidak Boleh kosong");
@@ -78,6 +82,9 @@ public class UbahActivity extends AppCompatActivity {
                 else if(deskripsiSingkat.trim().isEmpty()){
                     etDeskripsiSingkat.setError("Deskripsi singkat Tidak Boleh Kosong");
                 }
+                else if(Gambar.trim().isEmpty()){
+                    etDeskripsiSingkat.setError("Gambar Tidak Boleh Kosong");
+                }
                 else{
                     UbahJajanan();
                 }
@@ -87,7 +94,7 @@ public class UbahActivity extends AppCompatActivity {
 
     private void UbahJajanan(){
         APIRequestData ARD = RetroServer.konekRetrofit().create(APIRequestData.class);
-        Call<ModelResponses> proses = ARD.ardUpdate(yId, nama,rasa,rating,harga,deskripsiSingkat);
+        Call<ModelResponses> proses = ARD.ardUpdate(yId, nama,rasa,rating,harga,deskripsiSingkat,Gambar);
 
         proses.enqueue(new Callback<ModelResponses>() {
             @Override

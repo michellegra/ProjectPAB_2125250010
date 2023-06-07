@@ -86,6 +86,16 @@
         android:maxLength="20"
         android:inputType="text"
         />
+    <EditText
+        android:id="@+id/et_Gambar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Gambar"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="21sp"
+        android:maxLength="20"
+        />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_tambah"
