@@ -6,12 +6,11 @@
     android:background="@drawable/bg2"
     android:elevation="32dp">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/ll_jajanan"
         android:layout_width="match_parent"
         android:layout_height="218dp"
         android:background="@drawable/bgbanner"
-        android:orientation="vertical"
         android:padding="10dp">
 
 
@@ -30,10 +29,22 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="30sp"
+            android:layout_below="@+id/tv_id"
             android:text="Nama"
             android:textColor="@color/black"
             android:textSize="21sp"
             android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/iv_jajanan"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="500px"
+            android:layout_marginTop="60px"
+            android:layout_alignParentStart="true"
+            android:padding="16dp"
+            android:layout_toEndOf="@+id/tv_deskripsi"
+            />
 
         <TextView
             android:id="@+id/tv_rasa"
@@ -42,6 +53,7 @@
             android:layout_marginLeft="50dp"
             android:text="Rasa"
             android:textColor="@color/black"
+            android:layout_below="@+id/tv_nama"
             android:textSize="21sp" />
 <!--        <TextView-->
 <!--            android:id="@+id/tv_arrow"-->
@@ -57,8 +69,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
-            android:text="Rating                                         >"
+            android:text="Rating"
             android:textColor="@color/black"
+            android:layout_below="@+id/tv_rasa"
             android:textSize="21sp" />
 
         <TextView
@@ -68,6 +81,7 @@
             android:layout_marginLeft="50dp"
             android:text="Harga"
             android:textColor="@color/black"
+            android:layout_below="@+id/tv_rating"
             android:textSize="21sp" />
 
         <TextView
@@ -78,10 +92,11 @@
             android:layout_marginRight="100dp"
             android:text="Deskripsi Singkat"
             android:maxLines="1"
+            android:layout_below="@+id/tv_harga"
             android:textColor="@color/black"
             android:textSize="21sp" />
 
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

@@ -43,6 +43,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        listJajanan = new ArrayList<>();
+//        listJajanan.add("https://divedigital.id/wp-content/uploads/2022/12/1-3.jpg");
+//        listJajanan.add("https://i.pinimg.com/736x/97/53/c3/9753c3f7906888b7dff60896da415fd3.jpg");
+//        // Add more image URLs as needed
+//
+//        // Initialize the RecyclerView and adapter
+//        recyclerView = findViewById(R.id.recyclerView);
+//        adapter = new CustomAdapter(imageUrlList, this);
+//
+//        // Set the adapter to the RecyclerView
+//        recyclerView.setAdapter(adapter);
+
+
         rvJajanan = findViewById(R.id.rv_Jajanan);
         fabTambah = findViewById(R.id.fab_tambah);
         pbJajanan = findViewById(R.id.pb_Jajanan);
@@ -110,13 +123,5 @@ public class MainActivity extends AppCompatActivity {
                 pbJajanan.setVisibility(View.GONE);
             }
         });
-
-//        private void refreshApp(){
-//            Object swipeToRefresh;
-//            swipeToRefresh.setOnRefreshListener{
-//                Toast.makeText(this,"Page refreshed", Toast.LENGTH_SHORT).show();
-//            swipeToRefresh.isRefreshing = false
-//            }
-//        }
     }
 }

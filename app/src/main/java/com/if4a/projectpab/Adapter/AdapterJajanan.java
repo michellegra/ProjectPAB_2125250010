@@ -7,12 +7,15 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.if4a.projectpab.API.APIRequestData;
 import com.if4a.projectpab.API.RetroServer;
 import com.if4a.projectpab.Activity.DetailActivity;
@@ -21,6 +24,7 @@ import com.if4a.projectpab.Activity.UbahActivity;
 import com.if4a.projectpab.Model.ModelJajanan;
 import com.if4a.projectpab.Model.ModelResponses;
 import com.if4a.projectpab.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -53,6 +57,14 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
         holder.tvRating.setText(MJ.getRating());
         holder.tvHarga.setText(MJ.getHarga());
         holder.tvDeskrpsiSingkat.setText(MJ.getDeskripsi_singkat());
+//        holder.bind(new ModelJajanan(MJ.getGambar()));
+
+        if(MJ.getGambar().isEmpty()){
+            holder.iv_gambar.setImageResource(R.drawable.ic_launcher_background);
+        }
+        else{
+            Picasso.get().load(MJ.getGambar()).into(holder.iv_gambar);
+        }
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +74,7 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
                 String rating = MJ.getRating();
                 String harga = MJ.getHarga();
                 String deskripsiSingkat = MJ.getDeskripsi_singkat();
+                String Gambar = MJ.getGambar();
 
                 Intent intent  = new Intent(holder.itemView.getContext(), DetailActivity.class);
                 intent.putExtra("varNama",nama);
@@ -69,6 +82,7 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
                 intent.putExtra("varRating",rating);
                 intent.putExtra("varHarga",harga);
                 intent.putExtra("varDeskripsiSingkat",deskripsiSingkat);
+                intent.putExtra("varGambar", Gambar);
                 holder.itemView.getContext().startActivity(intent);
             }
         });
@@ -81,6 +95,8 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
 
     public class VHJajanan extends RecyclerView.ViewHolder{
         TextView tvId, tvNama,tvRasa,tvRating,tvHarga,tvDeskrpsiSingkat;
+        ImageView iv_gambar;
+//        private ModelJajanan gambar;
 
         public VHJajanan(@NonNull View itemView) {
             super(itemView);
@@ -91,6 +107,7 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
             tvRating = itemView.findViewById(R.id.tv_rating);
             tvHarga = itemView.findViewById(R.id.tv_harga);
             tvDeskrpsiSingkat =itemView.findViewById(R.id.tv_deskripsi);
+            iv_gambar = itemView.findViewById(R.id.iv_jajanan);
 
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
@@ -130,6 +147,14 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
                 }
             });
         }
+
+//        public void bind (ModelJajanan gambar){
+//            this.gambar = gambar;
+//
+//            Glide.with(itemView.getContext())
+//                    .load(gambar.getGambar())
+//                    .into(iv_gambar);
+//        }
 
         private void hapusJajanan(String idJajanan){
             APIRequestData ARD = RetroServer.konekRetrofit().create(APIRequestData.class);
