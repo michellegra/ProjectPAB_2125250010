@@ -2,15 +2,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
 <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_margin="6dp"
-        android:background="@drawable/ok"
+        android:background="@drawable/wallpaperdetail"
         tools:context=".Activity.DetailActivity">
 
         <TextView
@@ -21,7 +21,7 @@
             android:textSize="35sp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="100dp"
             android:layout_marginStart="80dp"
             android:layout_marginBottom="20dp"
             />
@@ -36,21 +36,20 @@
 
         <TextView
             android:id="@+id/tv_detailnama"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nama Jajanan"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:layout_below="@+id/iv_detail"
             android:textColor="@color/black"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="30dp"
-            android:gravity="center_horizontal"
             android:layout_marginBottom="20dp"
             />
         <TextView
             android:id="@+id/tv_detailrasa"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Rasa"
             android:textSize="20sp"
@@ -62,7 +61,7 @@
             />
         <TextView
             android:id="@+id/tv_detailrating"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Rating"
             android:textSize="20sp"
@@ -74,7 +73,7 @@
             />
         <TextView
             android:id="@+id/tv_detailharga"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Harga"
             android:textSize="20sp"
@@ -86,7 +85,7 @@
             />
         <TextView
             android:id="@+id/tv_detaildeskripsiSingkat"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Deskripsi Singkat"
             android:textSize="20sp"
@@ -95,7 +94,6 @@
             android:layout_below="@+id/tv_detailharga"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="40dp"
-            android:layout_marginBottom="32dp"
             />
         </RelativeLayout>
 </ScrollView>

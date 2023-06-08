@@ -5,36 +5,50 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="6dp"
+    android:background="@drawable/wallpaperhome"
     android:orientation="vertical"
     tools:context=".Activity.HomeActivity">
 
-        <ImageView
-            android:id="@+id/iv_ilustrasi"
-            android:layout_width="wrap_content"
-            android:layout_height="301dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="100dp"
-            android:layout_marginRight="50dp"
-            android:src="@drawable/gifpinguin" />
+<!--        <ImageView-->
+<!--            android:id="@+id/iv_ilustrasi"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="40dp"-->
+<!--            android:layout_marginTop="300dp"-->
+<!--            android:layout_marginBottom="300dp"-->
+<!--            android:layout_marginRight="80dp"-->
+<!--            android:src="@drawable/snack" />-->
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Welcome To JajananKu"
-            android:layout_marginLeft="90dp"
-            android:layout_marginRight="90dp"
+            android:layout_marginTop="450dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="60dp"
             android:textColor="@color/black"
             android:textStyle="bold"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selamat Datang"
+            android:layout_marginLeft="135dp"
+            android:layout_marginRight="60dp"
+            android:textColor="@color/black"
             android:textSize="20sp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_getstarted"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_margin="20dp"
-            android:layout_marginTop="100dp"
-            android:backgroundTint="#F1D9F8"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:backgroundTint="#9EDFC4"
             android:text="GET STARTED"
+            android:padding="14dp"
             android:textColor="@color/black"
             android:textSize="25sp"
             app:cornerRadius="20dp" />
