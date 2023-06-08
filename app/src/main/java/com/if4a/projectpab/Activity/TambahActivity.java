@@ -64,9 +64,11 @@ public class TambahActivity extends AppCompatActivity {
                 else if(deskripsiSingkat.trim().isEmpty()){
                     etDeskripsiSingkat.setError("Deskripsi singkat Tidak Boleh Kosong");
                 }
+                else if(Gambar.trim().isEmpty()){
+                    etDeskripsiSingkat.setError("Gambar Tidak Boleh Kosong");
+                }
                 else{
                     tambahJajanan();
-
                 }
             }
         });

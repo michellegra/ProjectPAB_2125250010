@@ -3,10 +3,6 @@ package com.if4a.projectpab.Model;
 public class ModelJajanan {
     private String id,nama,rasa,rating,harga,deskripsi_singkat,Gambar;
 
-    public ModelJajanan(String gambar) {
-        this.Gambar = Gambar;
-    }
-
     public String getId() {
         return id;
     }
@@ -14,12 +10,15 @@ public class ModelJajanan {
     public String getNama() {
         return nama;
     }
+
     public String getRasa() {
         return rasa;
     }
+
     public String getRating() {
         return rating;
     }
+
     public String getHarga() {
         return harga;
     }
@@ -27,6 +26,7 @@ public class ModelJajanan {
     public String getDeskripsi_singkat() {
         return deskripsi_singkat;
     }
+
     public String getGambar() {
         return Gambar;
     }

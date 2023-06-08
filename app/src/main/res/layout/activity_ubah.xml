@@ -33,7 +33,7 @@
         android:src="@drawable/logo2don" />
 
     <EditText
-        android:id="@+id/et_nama"
+        android:id="@+id/et_ubahNama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nama"
@@ -44,7 +44,7 @@
         />
 
     <EditText
-        android:id="@+id/et_rasa"
+        android:id="@+id/et_ubahRasa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Rasa"
@@ -54,7 +54,7 @@
         android:inputType="text"
         />
     <EditText
-        android:id="@+id/et_rating"
+        android:id="@+id/et_ubahRating"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Rating"
@@ -64,7 +64,7 @@
         android:inputType="text"
         />
     <EditText
-        android:id="@+id/et_harga"
+        android:id="@+id/et_ubahHarga"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Harga"
@@ -75,10 +75,20 @@
         />
 
     <EditText
-        android:id="@+id/et_deskripsi"
+        android:id="@+id/et_ubahDeskripsi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Deskripsi Singkat"
+        android:textColorHint="@color/white"
+        android:textSize="21sp"
+        android:textColor="@color/white"
+        android:inputType="text"
+        />
+    <EditText
+        android:id="@+id/et_ubahGambar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Link Gambar"
         android:textColorHint="@color/white"
         android:textSize="21sp"
         android:textColor="@color/white"

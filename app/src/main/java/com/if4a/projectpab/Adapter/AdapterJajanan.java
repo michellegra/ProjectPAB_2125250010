@@ -14,8 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
+
 import com.if4a.projectpab.API.APIRequestData;
 import com.if4a.projectpab.API.RetroServer;
 import com.if4a.projectpab.Activity.DetailActivity;
@@ -35,7 +34,6 @@ import retrofit2.Response;
 public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajanan> {
     private Context ctx;
     private List<ModelJajanan> listJajanan;
-
     public AdapterJajanan(Context ctx, List<ModelJajanan> listJajanan) {
         this.ctx = ctx;
         this.listJajanan = listJajanan;
@@ -51,21 +49,25 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
     @Override
     public void onBindViewHolder(@NonNull VHJajanan holder, int position) {
         ModelJajanan MJ = listJajanan.get(position);
+
         holder.tvId.setText(MJ.getId());
         holder.tvNama.setText((position+1) + "." + MJ.getNama());
         holder.tvRasa.setText(MJ.getRasa());
         holder.tvRating.setText(MJ.getRating());
         holder.tvHarga.setText(MJ.getHarga());
         holder.tvDeskrpsiSingkat.setText(MJ.getDeskripsi_singkat());
+        holder.tvGambar.setText(MJ.getGambar());
+        if(MJ.getGambar().isEmpty()){
+            holder.ivgambar.setImageResource(R.drawable.ic_launcher_background);
+        }
+        else {
+            Picasso.get().load(MJ.getGambar()).into(holder.ivgambar);
+        }
+
 
 //        holder.bind(new ModelJajanan(MJ.getGambar()));
 
-        if(MJ.getGambar().isEmpty()){
-            holder.iv_gambar.setImageResource(R.drawable.ic_launcher_background);
-        }
-        else{
-            Picasso.get().load(MJ.getGambar()).into(holder.iv_gambar);
-        }
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,9 +97,9 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
     }
 
     public class VHJajanan extends RecyclerView.ViewHolder{
+
         TextView tvId, tvNama,tvRasa,tvRating,tvHarga,tvDeskrpsiSingkat,tvGambar;
-        ImageView iv_gambar;
-//        private ModelJajanan gambar;
+        ImageView ivgambar;
 
         public VHJajanan(@NonNull View itemView) {
             super(itemView);
@@ -108,7 +110,10 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
             tvRating = itemView.findViewById(R.id.tv_rating);
             tvHarga = itemView.findViewById(R.id.tv_harga);
             tvDeskrpsiSingkat =itemView.findViewById(R.id.tv_deskripsi);
-            iv_gambar = itemView.findViewById(R.id.iv_jajanan);
+            ivgambar =itemView.findViewById(R.id.iv_jajanan);
+            tvGambar = itemView.findViewById(R.id.tv_gambar);
+//            iv_gambar.getContentDescription().toString();
+
             itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
@@ -131,13 +136,18 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
                     pesan.setPositiveButton("Ubah", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
+
                             Intent pindah = new Intent(ctx, UbahActivity.class);
+
                             pindah.putExtra("xId", tvId.getText().toString());
                             pindah.putExtra("xNama", tvNama.getText().toString());
                             pindah.putExtra("xRasa", tvRasa.getText().toString());
                             pindah.putExtra("xRating", tvRating.getText().toString());
                             pindah.putExtra("xHarga", tvHarga.getText().toString());
                             pindah.putExtra("xDeskripsiSingkat", tvDeskrpsiSingkat.getText().toString());
+                            pindah.putExtra("xGambar",tvGambar.getText().toString());
+
+                            Toast.makeText(ctx, ",Pesan: " + pesan,Toast.LENGTH_SHORT).show();
                             ctx.startActivity(pindah);
                         }
                     });

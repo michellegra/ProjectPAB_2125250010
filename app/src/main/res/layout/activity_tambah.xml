@@ -94,7 +94,7 @@
         android:textColorHint="@color/white"
         android:textColor="@color/white"
         android:textSize="21sp"
-        android:maxLength="20"
+        android:maxLength="100"
         />
 
     <com.google.android.material.button.MaterialButton

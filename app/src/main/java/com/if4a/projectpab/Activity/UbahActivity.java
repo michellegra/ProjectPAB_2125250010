@@ -40,12 +40,12 @@ public class UbahActivity extends AppCompatActivity {
         yDeskripsiSingkat = ambil.getStringExtra("xDeskripsiSingkat");
         yGambar = ambil.getStringExtra("xGambar");
 
-        etNama = findViewById(R.id.et_nama);
-        etRasa = findViewById(R.id.et_rasa);
-        etRating = findViewById(R.id.et_rating);
-        etHarga = findViewById(R.id.et_harga);
-        etDeskripsiSingkat = findViewById(R.id.et_deskripsi);
-        etGambar =findViewById(R.id.et_Gambar);
+        etNama = findViewById(R.id.et_ubahNama);
+        etRasa = findViewById(R.id.et_ubahRasa);
+        etRating = findViewById(R.id.et_ubahRating);
+        etHarga = findViewById(R.id.et_ubahHarga);
+        etDeskripsiSingkat = findViewById(R.id.et_ubahDeskripsi);
+        etGambar =findViewById(R.id.et_ubahGambar);
         btnUbah = findViewById(R.id.btn_Ubah);
 
 
