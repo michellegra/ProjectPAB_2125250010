@@ -2,5 +2,6 @@
     <string name="app_name">JajananKu</string>
     <string name="menu_about">AboutUs</string>
     <string name="menu_contact">My Profile</string>
+    <string name="menu_detail">Detail</string>
 
 </resources>
