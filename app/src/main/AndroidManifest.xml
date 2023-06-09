@@ -49,6 +49,7 @@
         <activity
             android:name=".Activity.ContactUsActivity"
             android:exported="false"
+            android:label="@string/menu_contact"
             android:parentActivityName=".Activity.MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
@@ -57,6 +58,7 @@
         <activity
             android:name=".Activity.AboutUsActivity"
             android:exported="false"
+            android:label="@string/menu_about"
             android:parentActivityName=".Activity.MainActivity" />
         <activity
             android:name=".Activity.DetailActivity"

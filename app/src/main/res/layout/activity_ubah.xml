@@ -10,7 +10,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/wallpaperdetail1"
+    android:background="@drawable/wallpaperubah"
     tools:context=".Activity.UbahActivity">
 
     <TextView
@@ -100,7 +100,7 @@
         android:layout_marginBottom="20dp"
         android:background="@drawable/bg_corner"
         android:backgroundTint="#B6EFAA"
-        android:padding="10dp"
+        android:padding="30dp"
         android:drawablePadding="8dp"/>
 
     <EditText
@@ -121,10 +121,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
         android:backgroundTint="#C4B5C8"
         app:cornerRadius="20dp"
-        android:layout_margin="20dp"
         android:textSize="21sp"
+        android:padding="15dp"
         android:textColor="@color/black"
         android:text="UBAH"/>
 

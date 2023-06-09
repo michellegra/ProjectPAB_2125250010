@@ -89,6 +89,7 @@
             android:layout_height="wrap_content"
             android:text="Deskripsi Singkat"
             android:textSize="20sp"
+            android:justificationMode="inter_word"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:layout_below="@+id/tv_detailharga"
