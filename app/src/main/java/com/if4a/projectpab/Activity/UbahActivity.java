@@ -23,7 +23,7 @@ public class UbahActivity extends AppCompatActivity {
     private String yId,yNama,yRasa,yRating,yHarga,yDeskripsiSingkat,yGambar;
     private EditText etNama,etRasa,etRating,etHarga,etDeskripsiSingkat,etGambar;
     private Button btnUbah;
-    private String nama,rasa,rating,harga,deskripsiSingkat,Gambar;
+    private String nama,rasa,rating,harga,deskripsiSingkat,gambar;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -65,7 +65,7 @@ public class UbahActivity extends AppCompatActivity {
                 rating= etRating.getText().toString();
                 harga= etHarga.getText().toString();
                 deskripsiSingkat= etDeskripsiSingkat.getText().toString();
-                Gambar=etGambar.getText().toString();
+                gambar=etGambar.getText().toString();
 
                 if(nama.trim().isEmpty()){
                     etNama.setError("Nama Tidak Boleh kosong");
@@ -82,9 +82,9 @@ public class UbahActivity extends AppCompatActivity {
                 else if(deskripsiSingkat.trim().isEmpty()){
                     etDeskripsiSingkat.setError("Deskripsi singkat Tidak Boleh Kosong");
                 }
-                else if(Gambar.trim().isEmpty()){
-                    etDeskripsiSingkat.setError("Gambar Tidak Boleh Kosong");
-                }
+//                else if(gambar.trim().isEmpty()){
+//                    etDeskripsiSingkat.setError("Gambar Tidak Boleh Kosong");
+//                }
                 else{
                     UbahJajanan();
                 }
@@ -94,7 +94,7 @@ public class UbahActivity extends AppCompatActivity {
 
     private void UbahJajanan(){
         APIRequestData ARD = RetroServer.konekRetrofit().create(APIRequestData.class);
-        Call<ModelResponses> proses = ARD.ardUpdate(yId, nama,rasa,rating,harga,deskripsiSingkat,Gambar);
+        Call<ModelResponses> proses = ARD.ardUpdate(yId, nama,rasa,rating,harga,deskripsiSingkat,gambar);
 
         proses.enqueue(new Callback<ModelResponses>() {
             @Override

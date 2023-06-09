@@ -51,19 +51,14 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
         ModelJajanan MJ = listJajanan.get(position);
 
         holder.tvId.setText(MJ.getId());
-        holder.tvNama.setText((position+1) + "." + MJ.getNama());
+        holder.tvNama.setText(MJ.getNama());
         holder.tvRasa.setText(MJ.getRasa());
         holder.tvRating.setText(MJ.getRating());
         holder.tvHarga.setText(MJ.getHarga());
         holder.tvDeskrpsiSingkat.setText(MJ.getDeskripsi_singkat());
         holder.tvGambar.setText(MJ.getGambar());
-        if(MJ.getGambar().isEmpty()){
-            holder.ivgambar.setImageResource(R.drawable.ic_launcher_background);
-        }
-        else {
-            Picasso.get().load(MJ.getGambar()).into(holder.ivgambar);
-        }
 
+        Picasso.get().load(MJ.getGambar()).into(holder.ivgambar);
 
 //        holder.bind(new ModelJajanan(MJ.getGambar()));
 

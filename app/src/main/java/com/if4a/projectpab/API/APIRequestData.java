@@ -20,7 +20,7 @@ public interface APIRequestData {
             @Field("rating") String rating,
             @Field("harga") String harga,
             @Field("deskripsi_singkat") String deskripsi_singkat,
-            @Field("Gambar") String Gambar
+            @Field("gambar") String Gambar
     );
 
     @FormUrlEncoded
@@ -32,7 +32,7 @@ public interface APIRequestData {
             @Field("rating") String rating,
             @Field("harga") String harga,
             @Field("deskripsi_singkat") String deskripsi_singkat,
-            @Field("Gambar") String Gambar
+            @Field("gambar") String Gambar
     );
 
     @FormUrlEncoded

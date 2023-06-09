@@ -1,7 +1,7 @@
 package com.if4a.projectpab.Model;
 
 public class ModelJajanan {
-    private String id,nama,rasa,rating,harga,deskripsi_singkat,Gambar;
+    private String id,nama,rasa,rating,harga,deskripsi_singkat,gambar;
 
     public String getId() {
         return id;
@@ -28,6 +28,6 @@ public class ModelJajanan {
     }
 
     public String getGambar() {
-        return Gambar;
+        return gambar;
     }
 }
