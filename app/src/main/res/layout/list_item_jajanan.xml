@@ -9,7 +9,7 @@
     <RelativeLayout
         android:id="@+id/ll_jajanan"
         android:layout_width="match_parent"
-        android:layout_height="218dp"
+        android:layout_height="171dp"
         android:background="@drawable/hijau"
         android:padding="10dp">
 
@@ -26,9 +26,9 @@
             android:id="@+id/tv_nama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_id"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="30sp"
-            android:layout_below="@+id/tv_id"
             android:text="Nama"
             android:textColor="@color/black"
             android:textSize="21sp"
@@ -38,68 +38,63 @@
             android:id="@+id/iv_jajanan"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginStart="650px"
-            android:layout_marginTop="100px"
-            android:layout_marginEnd="40dp"
-            android:layout_marginBottom="40dp"
             android:layout_alignParentStart="true"
-            android:padding="16dp"
+            android:layout_marginStart="500px"
+            android:layout_marginTop="60px"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="30dp"
             android:layout_toEndOf="@+id/tv_deskripsi"
-            />
+            android:padding="16dp" />
+
         <TextView
             android:id="@+id/tv_gambar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone"/>
+            android:visibility="gone" />
+
         <TextView
             android:id="@+id/tv_rasa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nama"
             android:layout_marginLeft="50dp"
             android:text="Rasa"
             android:textColor="@color/black"
-            android:layout_below="@+id/tv_nama"
             android:textSize="21sp" />
-<!--        <TextView-->
-<!--            android:id="@+id/tv_arrow"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginLeft="340dp"-->
-<!--            android:text=">"-->
-<!--            android:textColor="@color/black"-->
-<!--            android:textSize="21sp" />-->
 
         <TextView
             android:id="@+id/tv_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_rasa"
             android:layout_marginLeft="50dp"
             android:text="Rating"
             android:textColor="@color/black"
-            android:layout_below="@+id/tv_rasa"
             android:textSize="21sp" />
 
         <TextView
             android:id="@+id/tv_harga"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_rating"
             android:layout_marginLeft="50dp"
             android:text="Harga"
             android:textColor="@color/black"
-            android:layout_below="@+id/tv_rating"
-            android:textSize="21sp" />
+            android:textSize="21sp"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/tv_deskripsi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_harga"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="100dp"
-            android:text="Deskripsi Singkat"
             android:maxLines="1"
-            android:layout_below="@+id/tv_harga"
+            android:text="Deskripsi Singkat"
             android:textColor="@color/black"
-            android:textSize="21sp" />
+            android:textSize="21sp"
+            android:visibility="gone" />
 
 
     </RelativeLayout>

@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/about"
+    android:background="@drawable/tcbgabout"
     android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Us"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="50dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aplikasi daftar jajanan adalah aplikasi yang memungkinkan pengguna untuk melihat daftar jajanan yang tersedia. Pengguna dapat melihat nama jajanan, gambar, dan informasi lainnya yang terkait dengan setiap jajanan."
+        android:layout_marginRight="50dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="50dp"
+        />
+
 
 
 <!--    <TextView-->
@@ -48,4 +71,4 @@
 <!--        android:textStyle="bold" />-->
 
 
-</RelativeLayout>
+</LinearLayout>
