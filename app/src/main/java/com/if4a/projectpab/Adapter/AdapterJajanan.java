@@ -153,14 +153,6 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
             });
         }
 
-//        public void bind (ModelJajanan gambar){
-//            this.gambar = gambar;
-//
-//            Glide.with(itemView.getContext())
-//                    .load(gambar.getGambar())
-//                    .into(iv_gambar);
-//        }
-
         private void hapusJajanan(String idJajanan){
             APIRequestData ARD = RetroServer.konekRetrofit().create(APIRequestData.class);
             Call<ModelResponses> proses = ARD.ardDelete(idJajanan);
