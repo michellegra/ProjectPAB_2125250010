@@ -8,10 +8,27 @@
     android:layout_margin="6dp"
     tools:context=".Activity.MainActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tcsnack"
+        android:layout_marginTop="20dp"
+        />
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Welcome"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="35sp"-->
+<!--        android:layout_marginLeft="130dp"-->
+<!--        android:layout_marginTop="80dp"-->
+<!--        />-->
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_Jajanan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="230dp"
         tools:listitem="@layout/list_item_jajanan"
         />
     <ProgressBar
