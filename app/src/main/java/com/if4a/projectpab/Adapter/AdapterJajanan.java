@@ -115,7 +115,7 @@ public class AdapterJajanan extends RecyclerView.Adapter<AdapterJajanan.VHJajana
 
                     AlertDialog.Builder pesan = new AlertDialog.Builder(ctx);
 
-                    pesan.setTitle("Perhatian");
+                    pesan.setTitle("Warning");
                     pesan.setMessage("Operasi Apa yang Ingin Dilakukan?");
                     pesan.setCancelable(true);
 
