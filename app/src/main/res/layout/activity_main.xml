@@ -8,11 +8,18 @@
     android:layout_margin="10dp"
     tools:context=".Activity.MainActivity">
 
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_material"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300dp"
+        />
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/tcsnack"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         />
 <!--    <TextView-->
 <!--        android:layout_width="match_parent"-->
@@ -28,7 +35,7 @@
         android:id="@+id/rv_Jajanan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="230dp"
+        android:layout_marginTop="260dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         tools:listitem="@layout/list_item_jajanan"

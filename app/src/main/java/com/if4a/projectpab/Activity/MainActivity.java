@@ -2,6 +2,7 @@ package com.if4a.projectpab.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -10,10 +11,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.switchmaterial.SwitchMaterial;
 import com.if4a.projectpab.API.APIRequestData;
 import com.if4a.projectpab.API.RetroServer;
 import com.if4a.projectpab.Adapter.AdapterJajanan;
@@ -36,12 +40,12 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager lmJajanan;
     private List<ModelJajanan> listJajanan = new ArrayList<>();
 
-//    private lateinit var binding:ActivityMainBinding
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        SwitchMaterial switchMaterial = findViewById(R.id.switch_material);
 
         rvJajanan = findViewById(R.id.rv_Jajanan);
         fabTambah = findViewById(R.id.fab_tambah);
@@ -49,6 +53,18 @@ public class MainActivity extends AppCompatActivity {
 
         lmJajanan = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvJajanan.setLayoutManager(lmJajanan);
+
+        switchMaterial.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                }
+                else{
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                }
+            }
+        });
 
         fabTambah.setOnClickListener(new View.OnClickListener() {
             @Override
