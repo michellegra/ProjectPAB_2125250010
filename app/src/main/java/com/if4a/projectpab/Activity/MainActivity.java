@@ -7,11 +7,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,12 +42,24 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager lmJajanan;
     private List<ModelJajanan> listJajanan = new ArrayList<>();
 
+    ImageView imageViewDay;
+    SharedPreferences sharedPreferences=null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        imageViewDay = findViewById(R.id.imageviewDay);
         SwitchMaterial switchMaterial = findViewById(R.id.switch_material);
+//        sharedPreferences = getSharedPreferences("night", 0);
+//        Boolean booleanValue = sharedPreferences.getBoolean("night_mode", true);
+//            if(booleanValue){
+//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+//                switchMaterial.setChecked(true);
+//                imageViewDay.setImageResource(R.drawable.nightmode);
+//            }
+
 
         rvJajanan = findViewById(R.id.rv_Jajanan);
         fabTambah = findViewById(R.id.fab_tambah);
@@ -59,10 +73,21 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    switchMaterial.setChecked(true);
+                    imageViewDay.setImageResource(R.drawable.nightmode);
+//                    SharedPreferences.Editor editor = sharedPreferences.edit();
+//                    editor.putBoolean("night_mode",true);
+//                    editor.commit();
                 }
                 else{
                     AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    switchMaterial.setChecked(false);
+                    imageViewDay.setImageResource(R.drawable.lightmode);
+//                    SharedPreferences.Editor editor = sharedPreferences.edit();
+//                    editor.putBoolean("night_mode",true);
+//                    editor.commit();
                 }
+
             }
         });
 

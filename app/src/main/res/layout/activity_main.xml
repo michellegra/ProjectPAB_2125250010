@@ -8,6 +8,15 @@
     android:layout_margin="10dp"
     tools:context=".Activity.MainActivity">
 
+    <ImageView
+        android:id="@+id/imageviewDay"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:src="@drawable/lightmode"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="260dp"
+    />
+
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/switch_material"
         android:layout_width="wrap_content"
@@ -19,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/tcsnack"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="60dp"
         />
 <!--    <TextView-->
 <!--        android:layout_width="match_parent"-->
@@ -35,7 +44,7 @@
         android:id="@+id/rv_Jajanan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="280dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         tools:listitem="@layout/list_item_jajanan"
